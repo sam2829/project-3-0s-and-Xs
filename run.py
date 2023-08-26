@@ -1,9 +1,4 @@
-game_board = ["-", "-", "-",
-"-", "-", "-",
-"-", "-", "-",]
 
-current_player = "x"
-winner = None
 
 def print_game_board(game_board):
     """
@@ -17,4 +12,23 @@ def print_game_board(game_board):
     print(" | " + game_board[6] + " | " + game_board[7] + " | " + game_board[8] + " | ")
     print("---------------")
 
-print_game_board(game_board)
+def new_game():
+    """
+    This functions starts a new game and resets the board and board size.
+    """
+    game_board = ["-", "-", "-",
+                  "-", "-", "-",
+                  "-", "-", "-",]
+    current_player = "x"
+    winner = None
+    print("-" * 45)
+    print("Welcome to 0's and X's!!!")
+    print("The tope left corner is value 0")
+    print("-" * 45)
+    player_name = input("Please enter your name: \n")
+    print("-" * 45)
+    print(f"Welcome {player_name} lets get start the game!")
+    print("-" * 45)
+    print_game_board(game_board)
+
+new_game()

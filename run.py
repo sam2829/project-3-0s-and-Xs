@@ -1,22 +1,22 @@
 class PlayGame:
 
-    def __init__(self, game_board, current_player, player_name, winner, game_running):
+    def __init__(self, player_name):
         """
         
         """
         self.game_board = ["-", "-", "-",
                            "-", "-", "-",
                            "-", "-", "-",]
-        self.current_player = current_player
+        self.current_player = "x"
         self.player_name = player_name
-        self.winner = winner
-        self.game_running = game_running
+        self.winner = None
+        self.game_running = True
 
     def print_game_board(self):
         """
         This function is printing out the grid for which the game is played on
         """
-        self.game_board = game_board
+        
 
         print("---------------")
         print(" | " + game_board[0] + " | " + game_board[1] + " | " + game_board[2] + " | ")
@@ -123,6 +123,16 @@ class PlayGame:
             print(f"The winner is {self.winner}!\n")
             self.game_running = False
 
+    def run_game(self):
+        """
+        This function is allowing us to play the game and creates a while loop, which keeps looping until we have a winnner.
+        """
+
+        while self.game_running:
+            self.print_game_board()
+            self.player_input()
+            self.check_for_winner()
+
 
 def new_game():
     """
@@ -137,6 +147,7 @@ def new_game():
     print(f"Welcome {player_name} lets get start the game!")
     print("-" * 45)
     game = PlayGame(player_name)
+    game.run_game()
     
    
 

@@ -1,15 +1,18 @@
 class PlayGame:
 
-    def __init__(self, game_board, current_player, player_name, winner):
+    def __init__(self, game_board, current_player, player_name, winner, game_running):
         """
         
         """
-        self.game_board = game_board
+        self.game_board = ["-", "-", "-",
+                           "-", "-", "-",
+                           "-", "-", "-",]
         self.current_player = current_player
         self.player_name = player_name
         self.winner = winner
+        self.game_running = game_running
 
-    def print_game_board(self, game_board, current_player):
+    def print_game_board(self):
         """
         This function is printing out the grid for which the game is played on
         """
@@ -23,7 +26,7 @@ class PlayGame:
         print(" | " + game_board[6] + " | " + game_board[7] + " | " + game_board[8] + " | ")
         print("---------------")
 
-    def player_input(self, game_board, current_player, player_name):
+    def player_input(self):
         """
         This function allows the user to select a grid position 1-9, the value entered must be an
         integer and must be a value 1 - 9.
@@ -52,7 +55,7 @@ class PlayGame:
             except ValueError as e:
                 print(f"Invalid number: {e}, please try again.\n")
 
-    def check_row(self, game_board, winner):
+    def check_row(self):
         """
         Thie function checks to see if there is a winner across any of the rows on the game board.
         """
@@ -60,38 +63,42 @@ class PlayGame:
         self.winner = winner
 
         if game_board[0] == game_board[1] == game_board[2] and game_board[0] != "-":
-            winner = game_board[0]
+            self.winner = game_board[0]
             return True
         
         elif game_board[3] == game_board[4] == game_board[5] and game_board[3] != "-":
-            winner = game_board[3]
+            self.winner = game_board[3]
             return True
         
         elif game_board[6] == game_board[7] == game_board[8] and game_board[6] != "-":
-            winner = game_board[6]
+            self.winner = game_board[6]
             return True
 
 
-    def check_column(self, game_board, winner):
+    def check_column(self):
         """
         Thie function checks to see if there is a winner across any of the columns on the game board.
         """
         self.game_board = game_board
+        self.current_player = current_player
+        self.player_name = player_name
         self.winner = winner
+        
+
 
         if game_board[0] == game_board[3] == game_board[6] and game_board[0] != "-":
-            winner = game_board[0]
+            self.winner = game_board[0]
             return True
         
         elif game_board[1] == game_board[4] == game_board[7] and game_board[1] != "-":
-            winner = game_board[1]
+            self.winner = game_board[1]
             return True
         
         elif game_board[2] == game_board[5] == game_board[8] and game_board[2] != "-":
-            winner = game_board[2]
+            self.winner = game_board[2]
             return True
 
-    def check_diagonal(self, game_board, winner):
+    def check_diagonal(self):
         """
         Thie function checks to see if there is a winner across any of the diagonals on the game board.
         """
@@ -99,23 +106,28 @@ class PlayGame:
         self.winner = winner
 
         if game_board[0] == game_board[4] == game_board[8] and game_board[0] != "-":
-            winner = game_board[0]
+            self.winner = game_board[0]
             return True
         
         elif game_board[2] == game_board[4] == game_board[6] and game_board[2] != "-":
-            winner = game_board[2]
+            self.winner = game_board[2]
             return True
-    
+
+    def check_for_winner(self):
+        """
+        This function will check to see if there has been a winner and if so return a false to game_running and stop the game.
+        """
+
+        if self.check_row() or self.check_column() or self.check_diagonal():
+            self.print_game_board()
+            print(f"The winner is {self.winner}!\n")
+            self.game_running = False
+
 
 def new_game():
     """
     This functions starts a new game and resets the board and board size.
     """
-    game_board = ["-", "-", "-",
-                  "-", "-", "-",
-                  "-", "-", "-",]
-    current_player = "x"
-    winner = None
     print("-" * 45)
     print("Welcome to 0's and X's!!!")
     print("The top left corner is value 0")
@@ -124,14 +136,9 @@ def new_game():
     print("-" * 45)
     print(f"Welcome {player_name} lets get start the game!")
     print("-" * 45)
-    game_running = True
-    game = PlayGame(game_board, current_player, game_running, winner)
-    game.print_game_board(game_board, current_player)
-    game.player_input(game_board, current_player, player_name)
+    game = PlayGame(player_name)
     
-    #while game_running:
-       #game.print_game_board(game_board, current_player)
-       #game.player_input(game_board, current_player, player_name)
+   
 
 
 

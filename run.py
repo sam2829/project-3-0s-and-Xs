@@ -19,11 +19,11 @@ class PlayGame:
         
 
         print("---------------")
-        print(" | " + game_board[0] + " | " + game_board[1] + " | " + game_board[2] + " | ")
+        print(" | " + self.game_board[0] + " | " + self.game_board[1] + " | " + self.game_board[2] + " | ")
         print("---------------")
-        print(" | " + game_board[3] + " | " + game_board[4] + " | " + game_board[5] + " | ")
+        print(" | " + self.game_board[3] + " | " + self.game_board[4] + " | " + self.game_board[5] + " | ")
         print("---------------")
-        print(" | " + game_board[6] + " | " + game_board[7] + " | " + game_board[8] + " | ")
+        print(" | " + self.game_board[6] + " | " + self.game_board[7] + " | " + self.game_board[8] + " | ")
         print("---------------")
 
     def player_input(self):
@@ -31,19 +31,16 @@ class PlayGame:
         This function allows the user to select a grid position 1-9, the value entered must be an
         integer and must be a value 1 - 9.
         """
-        self.game_board = game_board
-        self.current_player = current_player
-        self.player_name = player_name
 
         while True:
 
             try:
                 print("-" * 45)
-                print(f"It's your turn {player_name}.\n")
+                print(f"It's your turn {self.player_name}.\n")
                 print("-" * 45)
                 inp = int(input("Please select a grid position 1 - 9:\n "))
                 if 1<= inp <=9 and self.game_board[inp-1] == "-":
-                    self.game_board[inp-1] = current_player
+                    self.game_board[inp-1] = self.current_player
                     break
                 
                 elif self.game_board != "-":
@@ -59,19 +56,17 @@ class PlayGame:
         """
         Thie function checks to see if there is a winner across any of the rows on the game board.
         """
-        self.game_board = game_board
-        self.winner = winner
 
-        if game_board[0] == game_board[1] == game_board[2] and game_board[0] != "-":
-            self.winner = game_board[0]
+        if self.game_board[0] == self.game_board[1] == self.game_board[2] and self.game_board[0] != "-":
+            self.winner = self.game_board[0]
             return True
         
-        elif game_board[3] == game_board[4] == game_board[5] and game_board[3] != "-":
-            self.winner = game_board[3]
+        elif self.game_board[3] == self.game_board[4] == self.game_board[5] and self.game_board[3] != "-":
+            self.winner = self.game_board[3]
             return True
         
-        elif game_board[6] == game_board[7] == game_board[8] and game_board[6] != "-":
-            self.winner = game_board[6]
+        elif self.game_board[6] == self.game_board[7] == self.game_board[8] and self.game_board[6] != "-":
+            self.winner = self.game_board[6]
             return True
 
 
@@ -79,38 +74,28 @@ class PlayGame:
         """
         Thie function checks to see if there is a winner across any of the columns on the game board.
         """
-        self.game_board = game_board
-        self.current_player = current_player
-        self.player_name = player_name
-        self.winner = winner
-        
-
-
-        if game_board[0] == game_board[3] == game_board[6] and game_board[0] != "-":
-            self.winner = game_board[0]
+        if self.game_board[0] == self.game_board[3] == self.game_board[6] and self.game_board[0] != "-":
+            self.winner = self.game_board[0]
             return True
         
-        elif game_board[1] == game_board[4] == game_board[7] and game_board[1] != "-":
-            self.winner = game_board[1]
+        elif self.game_board[1] == self.game_board[4] == self.game_board[7] and self.game_board[1] != "-":
+            self.winner = self.game_board[1]
             return True
         
-        elif game_board[2] == game_board[5] == game_board[8] and game_board[2] != "-":
-            self.winner = game_board[2]
+        elif self.game_board[2] == self.game_board[5] == self.game_board[8] and self.game_board[2] != "-":
+            self.winner = self.game_board[2]
             return True
 
     def check_diagonal(self):
         """
         Thie function checks to see if there is a winner across any of the diagonals on the game board.
         """
-        self.game_board = game_board
-        self.winner = winner
-
-        if game_board[0] == game_board[4] == game_board[8] and game_board[0] != "-":
-            self.winner = game_board[0]
+        if self.game_board[0] == self.game_board[4] == self.game_board[8] and self.game_board[0] != "-":
+            self.winner = self.game_board[0]
             return True
         
-        elif game_board[2] == game_board[4] == game_board[6] and game_board[2] != "-":
-            self.winner = game_board[2]
+        elif self.game_board[2] == self.game_board[4] == self.game_board[6] and self.game_board[2] != "-":
+            self.winner = self.game_board[2]
             return True
 
     def check_for_winner(self):

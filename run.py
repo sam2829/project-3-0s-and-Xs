@@ -1,12 +1,13 @@
 class PlayGame:
 
-    def __init__(self, game_board, current_player, player_name):
+    def __init__(self, game_board, current_player, player_name, winner):
         """
         
         """
         self.game_board = game_board
         self.current_player = current_player
         self.player_name = player_name
+        self.winner = winner
 
     def print_game_board(self, game_board, current_player):
         """
@@ -50,6 +51,25 @@ class PlayGame:
                     raise ValueError(f"Please select a value between numbers 1 - 9")
             except ValueError as e:
                 print(f"Invalid number: {e}, please try again.\n")
+
+    def check_row(self, game_board, winner):
+        """
+        Thie function checks to see if there is a winner across any of the rows on the game board.
+        """
+        self.game_board = game_board
+        self.winner = winner
+
+        if game_board[0] == game_board[1] == game_board[2] and game_board[0] != "-":
+            winner = game_board[0]
+            return True
+        
+        elif game_board[3] == game_board[4] == game_board[5] and game_board[3] != "-":
+            winner = game_board[3]
+            return True
+        
+        elif game_board[6] == game_board[7] == game_board[8] and game_board[6] != "-":
+            winner = game_board[6]
+            return True
     
 
 def new_game():
@@ -70,13 +90,13 @@ def new_game():
     print(f"Welcome {player_name} lets get start the game!")
     print("-" * 45)
     game_running = True
-    game = PlayGame(game_board, current_player, game_running)
+    game = PlayGame(game_board, current_player, game_running, winner)
     game.print_game_board(game_board, current_player)
     game.player_input(game_board, current_player, player_name)
     
     #while game_running:
        #game.print_game_board(game_board, current_player)
-       # game.player_input(game_board, current_player, player_name)
+       #game.player_input(game_board, current_player, player_name)
 
 
 

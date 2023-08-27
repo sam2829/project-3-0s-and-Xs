@@ -70,6 +70,41 @@ class PlayGame:
         elif game_board[6] == game_board[7] == game_board[8] and game_board[6] != "-":
             winner = game_board[6]
             return True
+
+
+    def check_column(self, game_board, winner):
+        """
+        Thie function checks to see if there is a winner across any of the columns on the game board.
+        """
+        self.game_board = game_board
+        self.winner = winner
+
+        if game_board[0] == game_board[3] == game_board[6] and game_board[0] != "-":
+            winner = game_board[0]
+            return True
+        
+        elif game_board[1] == game_board[4] == game_board[7] and game_board[1] != "-":
+            winner = game_board[1]
+            return True
+        
+        elif game_board[2] == game_board[5] == game_board[8] and game_board[2] != "-":
+            winner = game_board[2]
+            return True
+
+    def check_diagonal(self, game_board, winner):
+        """
+        Thie function checks to see if there is a winner across any of the diagonals on the game board.
+        """
+        self.game_board = game_board
+        self.winner = winner
+
+        if game_board[0] == game_board[4] == game_board[8] and game_board[0] != "-":
+            winner = game_board[0]
+            return True
+        
+        elif game_board[2] == game_board[4] == game_board[6] and game_board[2] != "-":
+            winner = game_board[2]
+            return True
     
 
 def new_game():

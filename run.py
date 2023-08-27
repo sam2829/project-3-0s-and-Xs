@@ -1,11 +1,12 @@
 class PlayGame:
 
-    def __init__(self, game_board, current_player):
+    def __init__(self, game_board, current_player, player_name):
         """
         
         """
         self.game_board = game_board
         self.current_player = current_player
+        self.player_name = player_name
 
     def print_game_board(self, game_board, current_player):
         """
@@ -21,17 +22,19 @@ class PlayGame:
         print(" | " + game_board[6] + " | " + game_board[7] + " | " + game_board[8] + " | ")
         print("---------------")
 
-    def player_input(self, game_board, current_player):
+    def player_input(self, game_board, current_player, player_name):
         """
         This function allows the user to select a grid position 1-9, the value entered must be an
         integer and must be a value 1 - 9.
         """
         self.game_board = game_board
         self.current_player = current_player
+        self.player_name = player_name
 
         while True:
 
             try:
+                print(f"It's your turn {player_name}.\n")
                 inp = int(input("Please select a grid position 1 - 9:\n "))
                 if 1<= inp <=9 and self.game_board[inp-1] == "-":
                     self.game_board[inp-1] = current_player
@@ -42,7 +45,6 @@ class PlayGame:
             except ValueError as e:
                 print(f"Invalid number: {e}, please try again.\n")
     
-           
 
 def new_game():
     """
@@ -62,9 +64,9 @@ def new_game():
     print(f"Welcome {player_name} lets get start the game!")
     print("-" * 45)
     game_running = True
-    game = PlayGame(game_board, current_player)
+    game = PlayGame(game_board, current_player, game_running)
     game.print_game_board(game_board, current_player)
-    game.player_input(game_board, current_player)
+    game.player_input(game_board, current_player, player_name)
 
 
 new_game()

@@ -48,11 +48,14 @@ class PlayGame:
                 elif 1<= inp <9 and self.game_board[inp-1] != "-":
                     print("-" * 45)
                     print(f"Looks like that spot is already taken, please try again.\n")
+                    self.print_game_board()
                 
                 else:
                     raise ValueError(f"Please select a value between numbers 1 - 9")
             except ValueError as e:
+                print("-" * 45)
                 print(f"Invalid number: {e}, please try again.\n")
+                self.print_game_board()
 
     def check_row(self):
         """
@@ -170,7 +173,7 @@ def new_game():
     """
     print("-" * 45)
     print("Welcome to 0's and X's!!!")
-    print("The top left corner is value 0")
+    print("The top left corner is value 1")
     print("-" * 45)
     player_name = input("Please enter your name: \n")
     print("-" * 45)

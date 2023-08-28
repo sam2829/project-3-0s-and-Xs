@@ -45,7 +45,7 @@ class PlayGame:
                     self.game_board[inp-1] = self.current_player
                     break
                 
-                elif self.game_board != "-":
+                elif 1<= inp <9 and self.game_board[inp-1] != "-":
                     print("-" * 45)
                     print(f"Looks like that spot is already taken, please try again.\n")
                 

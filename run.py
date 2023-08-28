@@ -110,15 +110,19 @@ class PlayGame:
 
         if self.check_row() or self.check_column() or self.check_diagonal():
             self.print_game_board()
-            print(f"The winner is {self.winner}!\n")
-            self.game_running = False
+            if self.winner == "x":
+                print(f"Congratulations {self.player_name} you won!\n")
+                self.game_running = False
+            else:
+                print(f"Unlucky, computer wins!")
+                self.game_running = False
 
     def check_for_tie(self):
         """
         This function checks to see if the game has ended in a tie
         """
 
-        if "-" not in self.game_board:
+        if "-" not in self.game_board and not self.check_row() and not self.check_column() and not self.check_diagonal():
             print("-" * 45)
             self.print_game_board()
             print("It's a tie!")

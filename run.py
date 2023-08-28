@@ -113,9 +113,11 @@ class PlayGame:
             if self.winner == "x":
                 print(f"Congratulations {self.player_name} you won!\n")
                 self.game_running = False
+                self.current_player = None
             else:
                 print(f"Unlucky, computer wins!")
                 self.game_running = False
+                self.current_player = None
 
     def check_for_tie(self):
         """
@@ -127,6 +129,7 @@ class PlayGame:
             self.print_game_board()
             print("It's a tie!")
             self.game_running = False
+            self.current_player = None
 
     def switch_player(self):
         """
@@ -149,6 +152,8 @@ class PlayGame:
             if self.game_board[position] == "-":
                 self.game_board[position] = "0"
                 self.switch_player()
+
+                
 
 
     

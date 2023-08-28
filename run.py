@@ -1,3 +1,5 @@
+import random
+
 class PlayGame:
 
     def __init__(self, player_name):
@@ -130,6 +132,18 @@ class PlayGame:
         else:
             self.current_player = "x"
 
+    def computers_turn(self):
+        """
+        This function allows the computer to decide where on the grid it would like to place its go
+        """
+
+        while self.current_player == "0":
+            position = random.randint(0, 8)
+            if self.game_board[position] == "-":
+                self.game_board[position] = "0"
+                self.switch_player()
+
+
     
     def run_game(self):
         """
@@ -142,6 +156,10 @@ class PlayGame:
             self.check_for_winner()
             self.check_for_tie()
             self.switch_player()
+            self.computers_turn()
+            self.check_for_winner()
+            self.check_for_tie()
+            
     
     
 

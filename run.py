@@ -108,6 +108,17 @@ class PlayGame:
             print(f"The winner is {self.winner}!\n")
             self.game_running = False
 
+    def check_for_tie(self):
+        """
+        This function checks to see if the game has ended in a tie
+        """
+
+        if "-" not in self.game_board:
+            print("-" * 45)
+            self.print_game_board()
+            print("It's a tie!")
+            self.game_running = False
+
     def switch_player(self):
         """
         This function switches whos go it is, whether or not its x or 0.
@@ -129,6 +140,7 @@ class PlayGame:
             self.print_game_board()
             self.player_input()
             self.check_for_winner()
+            self.check_for_tie()
             self.switch_player()
     
     

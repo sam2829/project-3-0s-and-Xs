@@ -16,7 +16,7 @@ class PlayGame:
 
     def print_game_board(self):
         """
-        This function is printing out the grid for which the game is played on
+        This method is printing out the grid for which the game is played on
         """
         
 
@@ -30,7 +30,7 @@ class PlayGame:
 
     def player_input(self):
         """
-        This function allows the user to select a grid position 1-9, the value entered must be an
+        This method allows the user to select a grid position 1-9, the value entered must be an
         integer and must be a value 1 - 9.
         """
 
@@ -59,7 +59,7 @@ class PlayGame:
 
     def check_row(self):
         """
-        Thie function checks to see if there is a winner across any of the rows on the game board.
+        Thie method checks to see if there is a winner across any of the rows on the game board.
         """
 
         if self.game_board[0] == self.game_board[1] == self.game_board[2] and self.game_board[0] != "-":
@@ -77,7 +77,7 @@ class PlayGame:
 
     def check_column(self):
         """
-        Thie function checks to see if there is a winner across any of the columns on the game board.
+        Thie method checks to see if there is a winner across any of the columns on the game board.
         """
         if self.game_board[0] == self.game_board[3] == self.game_board[6] and self.game_board[0] != "-":
             self.winner = self.game_board[0]
@@ -93,7 +93,7 @@ class PlayGame:
 
     def check_diagonal(self):
         """
-        Thie function checks to see if there is a winner across any of the diagonals on the game board.
+        Thie method checks to see if there is a winner across any of the diagonals on the game board.
         """
         if self.game_board[0] == self.game_board[4] == self.game_board[8] and self.game_board[0] != "-":
             self.winner = self.game_board[0]
@@ -105,7 +105,7 @@ class PlayGame:
 
     def check_for_winner(self):
         """
-        This function will check to see if there has been a winner and if so return a false to game_running and stop the game.
+        This method will check to see if there has been a winner and if so return a false to game_running and stop the game.
         """
 
         if self.check_row() or self.check_column() or self.check_diagonal():
@@ -121,7 +121,7 @@ class PlayGame:
 
     def check_for_tie(self):
         """
-        This function checks to see if the game has ended in a tie
+        This method checks to see if the game has ended in a tie
         """
 
         if "-" not in self.game_board and not self.check_row() and not self.check_column() and not self.check_diagonal():
@@ -133,7 +133,7 @@ class PlayGame:
 
     def switch_player(self):
         """
-        This function switches whos go it is, whether or not its x or 0.
+        This method switches who's go it is, whether or not its x or 0.
         """
 
         if self.current_player == "x":
@@ -144,7 +144,7 @@ class PlayGame:
 
     def computers_turn(self):
         """
-        This function allows the computer to decide where on the grid it would like to place its go
+        This method allows the computer to decide where on the grid it would like to place its go
         """
 
         while self.current_player == "0":
@@ -156,7 +156,7 @@ class PlayGame:
 
     def restart_game(self):
         """
-        This functions asks the user if they would like to play the game again. Yes will restart the game, anything else will end the game.
+        This method asks the user if they would like to play the game again. Yes will restart the game, anything else will end the game.
         """
         print("-" * 45)
         play_again = (input(f"Would you like to play again? please type 'yes'. \n"))
@@ -175,7 +175,7 @@ class PlayGame:
     
     def run_game(self):
         """
-        This function is allowing us to play the game and creates a while loop, which keeps looping until we have a winnner.
+        This method is allowing us to play the game and creates a while loop, which keeps looping until we have a winnner.
         """
 
         while self.game_running:
@@ -192,12 +192,9 @@ class PlayGame:
 
             
     
-    
-
-
 def new_game():
     """
-    This functions starts a new game and resets the board and board size.
+    This function starts a new game and resets the board and board size.
     """
     print("-" * 45)
     print("Welcome to 0's and X's!!!")
@@ -211,7 +208,4 @@ def new_game():
     game.run_game()
     
    
-
-
-        
 new_game()

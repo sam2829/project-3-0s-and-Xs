@@ -4,7 +4,7 @@ class PlayGame:
 
     def __init__(self, player_name):
         """
-        
+        Creates an instance of PlayGame
         """
         self.game_board = ["-", "-", "-",
                            "-", "-", "-",

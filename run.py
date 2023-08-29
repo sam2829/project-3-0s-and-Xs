@@ -59,7 +59,7 @@ class PlayGame:
 
     def check_row(self):
         """
-        Thie method checks to see if there is a winner across any of the rows on the game board.
+        This method checks to see if there is a winner across any of the rows on the game board.
         """
 
         if self.game_board[0] == self.game_board[1] == self.game_board[2] and self.game_board[0] != "-":
@@ -77,7 +77,7 @@ class PlayGame:
 
     def check_column(self):
         """
-        Thie method checks to see if there is a winner across any of the columns on the game board.
+        This method checks to see if there is a winner across any of the columns on the game board.
         """
         if self.game_board[0] == self.game_board[3] == self.game_board[6] and self.game_board[0] != "-":
             self.winner = self.game_board[0]
@@ -93,7 +93,7 @@ class PlayGame:
 
     def check_diagonal(self):
         """
-        Thie method checks to see if there is a winner across any of the diagonals on the game board.
+        This method checks to see if there is a winner across any of the diagonals on the game board.
         """
         if self.game_board[0] == self.game_board[4] == self.game_board[8] and self.game_board[0] != "-":
             self.winner = self.game_board[0]
@@ -184,6 +184,12 @@ class PlayGame:
             self.check_for_winner()
             self.check_for_tie()
             self.switch_player()
+            
+            #This if not statement was added so that is the user wins or a tie, the game board and results message isnt printed twice.
+            if not self.game_running:
+                self.restart_game()
+                break
+            
             self.computers_turn()
             self.check_for_winner()
             self.check_for_tie()

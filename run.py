@@ -162,7 +162,7 @@ class PlayGame:
         play_again = (input(f"Would you like to play again? please type 'yes'. \n"))
         
         while True:
-            if play_again == "yes":
+            if play_again.lower() == "yes":
                 new_game()
             else:
                 print("-" * 45)

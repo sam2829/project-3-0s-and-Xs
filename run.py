@@ -159,7 +159,7 @@ class PlayGame:
         This method asks the user if they would like to play the game again. Yes will restart the game, anything else will end the game.
         """
         print("-" * 45)
-        play_again = (input(f"Would you like to play again? please type 'yes'. \n"))
+        play_again = (input(f"Would you like to play again? If so please type 'yes'. \n"))
         
         while True:
             if play_again.lower() == "yes":

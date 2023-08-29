@@ -3,8 +3,8 @@
 
 Users can try to beat the computer by connnecting three X's in a line whether it be in the same row, column or diagonal before computer does with 0's. Take it in turns to select your positions on the grid.
 
-Here is a liver version of my project:
-link here
+Here is a live version of my project:
+https://the-0-and-x-game-643188cf49a3.herokuapp.com/
 
 screen shot here of it being shown on all devices:
 

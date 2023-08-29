@@ -153,6 +153,22 @@ class PlayGame:
                 self.game_board[position] = "0"
                 self.switch_player()
 
+
+    def restart_game(self):
+        """
+        This functions asks the user if they would like to play the game again. Yes will restart the game, anything else will end the game.
+        """
+        print("-" * 45)
+        play_again = (input(f"Would you like to play again? please type 'yes'. \n"))
+        
+        while True:
+            if play_again == "yes":
+                new_game()
+            else:
+                print("-" * 45)
+                print("Thanks for playing.")
+            break
+ 
                 
 
 
@@ -171,6 +187,9 @@ class PlayGame:
             self.computers_turn()
             self.check_for_winner()
             self.check_for_tie()
+        else:
+            self.restart_game()
+
             
     
     
@@ -194,5 +213,5 @@ def new_game():
    
 
 
-
+        
 new_game()

@@ -203,8 +203,8 @@ def new_game():
     This function starts a new game and resets the board and board size.
     """
     print("-" * 45)
-    print("Welcome to 0's and X's!!!")
-    print("The top left corner is value 1")
+    print("Welcome to 0's and X's the game!!!")
+    print("The top left corner is the value of 1")
     print("-" * 45)
     player_name = input("Please enter your name: \n")
     print("-" * 45)

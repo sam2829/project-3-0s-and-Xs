@@ -81,6 +81,17 @@ The game can also end in a tie, in this scenario the game will be stopped, a mes
 ![Tie screenshot](assets/screenshots/tie-screenshot.png)
 
 
+## Technologies Used
+
+### Languages Used
+
+- Python was used to create the code for this project.
+
+### Frameworks & Programs Used
+
+- GitHub - To save and store the files for the game.
+- Heroku - Used to be able to run the code and play the game.
+
 
 
 

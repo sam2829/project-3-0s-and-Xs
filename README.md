@@ -6,7 +6,7 @@ Users can try to beat the computer by connnecting three X's in a line whether it
 Here is a live version of my project:
 https://the-0-and-x-game-643188cf49a3.herokuapp.com/
 
-screen shot here of it being shown on all devices:
+![Am I Responsive](assets/screenshots/responsive-screenshot.png)
 
 ## Contents
 
@@ -27,6 +27,12 @@ The user will first enter there name before starting the game. The user will the
 Once the user selects a grid position the computer will then select a random grid position, this will continue until there has been a declared winner or a tie.
 
 User must select a number between 1 and 9 and once that has not been selected previously by the user or computer.
+
+## Design
+
+To help me design and creat the code for this game, I built a flow chart to help understand how I wanted the game to work and what i needed to do to make the game work.
+
+
 
 
 

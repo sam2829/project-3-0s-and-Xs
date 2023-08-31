@@ -114,7 +114,34 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
   - I then scrolled down and clicked on the button "Deploy Branch" which is now building the app.
   - Once the app is successfully deployed, a message appeared "saying your app was successfully deployed." Then click on the "view" button which will take me to the deployed link.
 
-  
+  ## Testing
+
+  I have manually tested this project by doing the following:
+
+  - Passed the code through a PEP8 linter and confirmed there are no problems.
+  - Given invalid inputs: strings when numbers are expected, out of bounds inputs, same input twice.
+  - Tested in my local terminal and the Code Institute Heroku terminal.
+
+  Full test table:
+
+  | Feature | Expected Outome | Testing Performed | Result | Pass / Fail |
+  | --- | --- | --- | --- | --- |
+  | Enter Name and Begin | When program first starts I am asked to provide my name. Once I have given my name the game welcomes me with my name, prints the game board and starts the game. | Run program and enter name. | Program welcomes me by my name, prints the game board and starts the game. | Pass |
+  | Select First Grid Position | Select a grid position between 1 and 9. Once selected an 'x' should appear in the selected postion. Computer will then automatically position a '0' in a random grid position. | Selected a number between 1 and 9. | An 'x' appears in the grid position i selected and the computer randomly positioned a '0' on the grid. | Pass |
+  | Must Select a Grid Position Between 1 and 9. | Player must select a number between 1 and 9. If not an error message will be displayed and player asked to try again. | In turn selected 0 and numberous numbers over the value of 9. | Each time wrong value selected an error message appeared, reminded the user to select a number between 1 and 9 and asked to try again. | Pass |
+  | Must Select an Unused Grid Position | When trying to select a grid position that has already been taken up by an 'x' or a '0', a message will appear explaining to the user that that grid position has already been take and please select another number between 1 and 9. | Selected gid postions that were already taken. | Message appeared telling me that that grid position has already been taken and to select another number between 1 and 9. | Pass |
+  | Value Entered must be a Whole Integer and Not a String | When trying to select a grid position with a string or a decimal number, an error message will appear and ask the user to try again. | Entered a string as a value and then again as a decimal number. | Error message appears and asks the user to try again. | Pass |
+  | When Connected Three 'x' in a row, column or diagonally the player wins and congratulations message appears. | Played the game several times, each time connecting Three 'x' in a row, column and diagonally. Each time this ends the game telling the user that they have won. | Played the game and in turn connected three 'x' in a row, column and diagonally. | The game stops and displays a message saying that the player has won the game. | Pass |
+  | When Connected Three '0' in a row, column or diagonally | When three '0' are connected in a row, column or diagonally, the game is stopped and a message appears stating that the computer has won. | Played the game several times for the computer to connect three '0' in a row, column and diagonally. | The game is stopped and a message appears to inform the player that the computer has won. | Pass |
+  | Check for Tie | When there are no more grid positions left to choose from and neither player has connected 'x' or '0' in a row, column or diagonally the game will be stopped and a message appear stating the game has finished in a tie. | Played game several times making sure no player connected three in a row, column or diagonally. | The game is stopped and message appears stating the game has finished in a tie. | Pass |
+  Option to Play Again | When the game has finished, whether its finished with a player win, computer win or a tie. The player is asked whether or not they would like to play again. If the user types in 'yes' in lowercase or uppercase the game restarts. | Typed in 'yes' to play again, in uppercase, lowercase and random letters in capital. | The game restarted. | Pass |
+  | Not to Play Again | When asked if I would like to play again, if i type in anything else other than 'yes' then the program will stop have stopped. A message will appear saying thanks for playing. | Typed in lots of different words and letters including 'no'. | A message appeared syaing thanks for playing, then the program finished and would need to select run program again to start again. | Pass |
+
+
+
+
+
+
 
 
 

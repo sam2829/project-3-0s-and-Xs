@@ -184,7 +184,7 @@ class PlayGame:
             self.check_for_tie()
             self.switch_player()
             
-            #This if not statement was added so that is the user wins or a tie, the game board and results message isnt printed twice.
+            #This if not statement was added so that if the user wins or a tie, the game board and results message isnt printed twice.
             if not self.game_running:
                 self.restart_game()
                 break
@@ -199,7 +199,8 @@ class PlayGame:
     
 def new_game():
     """
-    This function starts a new game and resets the board and board size.
+    This function calls the PlayGame class to start the game. It asks for the players name and also 
+    prints out the game board showing the number values of each grid position on the grid.
     """
     print("-" * 45)
     print("Welcome to 0's and X's the game!!!")

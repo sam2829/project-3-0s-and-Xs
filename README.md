@@ -92,6 +92,29 @@ The game can also end in a tie, in this scenario the game will be stopped, a mes
 - GitHub - To save and store the files for the game.
 - Heroku - Used to be able to run the code and play the game.
 
+## Deployment
+
+This project was deployed using the Code Institute's mock terminal for Heroku.
+
+- Steps for deployment:
+  - First sign in to your Heroku account.
+  - On the top right of the page there is a drop down menu called "new", click this and click on "create new app".
+  - You then need to decide your unique app name using '-' between each words. Then select which region you are working from and then click on the button "create app".
+  - Once you have clicked on "create app" you will be taken to a new page. On this page you will see a row of tabs at the top left of the page. You first need to click on the "settings" tab and go tp the settings page.
+  - If you have any code that you have kept private which has been prevented from loading to your GitHub then you must click on the button "Reveal Config Vars". A small table will then appear with columns "key" and "value". In the field named "keys" type in "CREDS" all in captials, then in the field named "value" copy the code from the file in your project that you wish to upload and click the "add" button. 
+  My project did not use a creds file so I did not need to set this Config Vars.
+  - For this project to work I did have to set another Config Var. Using the same process as previous bullet point but this time the "key" field will be  "PORT" (all in capitals) and the "value" field will be "8000" then click the "add" button.
+  - I then had to add a buildpack. To do this i clicked on the "Add Buildpack" button, a pop up window then appears and I then have to click on "python" then the button "Add Buildpack".
+  I then had to repeat this process but this time adding the "node.js" buildpack. It is important to make sure these buildpcks are added in this order.
+  - I then went back to the tabs row at the top of the page and and clicked on the "Deploy" tab to take me to the deploy page.
+  - On the deployment page, i scrolled down to deployment method and confirmed i wanted to deploy through GitHub.
+  - When I click on GitHub a search bar will appear underneath which will allow me to search for my GitHub repository. I made sure I spelt the repository im searching for exactly as i named it and then clicked the search button.
+  - The repository then appeared underneath the my search, I checked this was the correct repository and then clicked the "connect" button. This has now linked up my Heroku app and my GitHub repository code.
+  - I then scrolled and clicked on the button "Enable Automatic Deploys", this allows my Heroku app to automatically update everytime ive pushed a new change to my code to GitHub.
+  - I then scrolled down and clicked on the button "Deploy Branch" which is now building the app.
+  - Once the app is successfully deployed, a message appeared "saying your app was successfully deployed." Then click on the "view" button which will take me to the deployed link.
+
+  
 
 
 

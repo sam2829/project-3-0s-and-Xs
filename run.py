@@ -17,8 +17,7 @@ class PlayGame:
     def print_game_board(self):
         """
         This method is printing out the grid for which the game is played on
-        """
-        
+        """       
 
         print("---------------")
         print(" | " + self.game_board[0] + " | " + self.game_board[1] + " | " + self.game_board[2] + " | ")

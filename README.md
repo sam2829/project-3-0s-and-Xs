@@ -31,6 +31,7 @@ User must select a number between 1 and 9 and once that has not been selected pr
 ## Design
 
 To help me design and creat the code for this game, I built a flow chart to help understand how I wanted the game to work and what i needed to do to make the game work.
+![Flowchart Screenshot](assets/screenshots/flowchart-screenshot.png)
 
 ## Features
 

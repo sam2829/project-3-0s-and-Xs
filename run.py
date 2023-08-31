@@ -203,7 +203,17 @@ def new_game():
     """
     print("-" * 45)
     print("Welcome to 0's and X's the game!!!")
-    print("The top left corner is the value of 1")
+    print("Below is the game board showing you the number value of each grid position of the game board. \n")
+    game_board_value =  ["1", "2", "3",
+                         "4", "5", "6",
+                         "7", "8", "9",]
+    print("---------------")
+    print(" | " + game_board_value[0] + " | " + game_board_value[1] + " | " + game_board_value[2] + " | ")
+    print("---------------")
+    print(" | " + game_board_value[3] + " | " + game_board_value[4] + " | " + game_board_value[5] + " | ")
+    print("---------------")
+    print(" | " + game_board_value[6] + " | " + game_board_value[7] + " | " + game_board_value[8] + " | ")
+    print("---------------")
     print("-" * 45)
     player_name = input("Please enter your name: \n")
     print("-" * 45)

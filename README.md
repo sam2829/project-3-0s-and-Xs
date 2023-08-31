@@ -16,6 +16,7 @@ https://the-0-and-x-game-643188cf49a3.herokuapp.com/
 * [Technologies Used](#technologies-used)
 * [Deployment](#deployment)
 * [Testing](#testing)
+* [Bugs](#bugs)
 * [Credits](#credits)
 
 ## How To Play
@@ -137,6 +138,14 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
   | Check for Tie | When there are no more grid positions left to choose from and neither player has connected 'x' or '0' in a row, column or diagonally the game will be stopped and a message appear stating the game has finished in a tie. | Played game several times making sure no player connected three in a row, column or diagonally. | The game is stopped and message appears stating the game has finished in a tie. | Pass |
   Option to Play Again | When the game has finished, whether its finished with a player win, computer win or a tie. The player is asked whether or not they would like to play again. If the user types in 'yes' in lowercase or uppercase the game restarts. | Typed in 'yes' to play again, in uppercase, lowercase and random letters in capital. | The game restarted. | Pass |
   | Not to Play Again | When asked if I would like to play again, if i type in anything else other than 'yes' then the program will stop have stopped. A message will appear saying thanks for playing. | Typed in lots of different words and letters including 'no'. | A message appeared syaing thanks for playing, then the program finished and would need to select run program again to start again. | Pass |
+
+  ## Bugs
+
+  ### Solved Bugs
+
+  - When I wrote the code, if the game finished with the user winning or a tie, the code would print out the final game board and results message twice. This seemed to be because the code was going through the run game method, while loop to quickly. To stop this I put an if not statement in the while loop to break the loop if a winner or a tie had already been found after the players turn.
+
+
 
 
 ## Credits

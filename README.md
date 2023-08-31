@@ -138,6 +138,11 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
   | Not to Play Again | When asked if I would like to play again, if i type in anything else other than 'yes' then the program will stop have stopped. A message will appear saying thanks for playing. | Typed in lots of different words and letters including 'no'. | A message appeared syaing thanks for playing, then the program finished and would need to select run program again to start again. | Pass |
 
 
+## Credits
+
+- Watched tutorial on how to build a Tic Tac Toe game on YouTube which I found very helpful. https://www.youtube.com/watch?v=dK6gJw4-NCo&t=192s
+
+
 
 
 

@@ -21,11 +21,14 @@ class PlayGame:
         """       
 
         print("---------------")
-        print(" | " + self.game_board[0] + " | " + self.game_board[1] + " | " + self.game_board[2] + " | ")
+        print(" | " + self.game_board[0] + " | " + self.game_board[1] +
+              " | " + self.game_board[2] + " | ")
         print("---------------")
-        print(" | " + self.game_board[3] + " | " + self.game_board[4] + " | " + self.game_board[5] + " | ")
+        print(" | " + self.game_board[3] + " | " + self.game_board[4] +
+              " | " + self.game_board[5] + " | ")
         print("---------------")
-        print(" | " + self.game_board[6] + " | " + self.game_board[7] + " | " + self.game_board[8] + " | ")
+        print(" | " + self.game_board[6] + " | " + self.game_board[7] +
+              " | " + self.game_board[8] + " | ")
         print("---------------")
 
     def player_input(self):
@@ -225,11 +228,14 @@ def new_game():
                          "4", "5", "6",
                          "7", "8", "9"]
     print("---------------")
-    print(" | " + game_board_value[0] + " | " + game_board_value[1] + " | " + game_board_value[2] + " | ")
+    print(" | " + game_board_value[0] + " | " + game_board_value[1] +
+          " | " + game_board_value[2] + " | ")
     print("---------------")
-    print(" | " + game_board_value[3] + " | " + game_board_value[4] + " | " + game_board_value[5] + " | ")
+    print(" | " + game_board_value[3] + " | " + game_board_value[4] +
+          " | " + game_board_value[5] + " | ")
     print("---------------")
-    print(" | " + game_board_value[6] + " | " + game_board_value[7] + " | " + game_board_value[8] + " | ")
+    print(" | " + game_board_value[6] + " | " + game_board_value[7] +
+          " | " + game_board_value[8] + " | ")
     print("---------------")
     print("-" * 45)
     player_name = input("Please enter your name: \n")

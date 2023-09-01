@@ -9,6 +9,8 @@
 
 - Passed the code through a PEP8 linter and confirmed there are no problems.
 
+![Validator Screenshot](assets/screenshots/validator-screenshot.png)
+
 ## Manual Testing
 
 I have manually tested this project by doing the following:

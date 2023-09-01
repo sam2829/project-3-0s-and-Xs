@@ -43,19 +43,19 @@ class PlayGame:
                 print("-" * 45)
                 print(f"It's your turn {self.player_name}.\n")
                 print("-" * 45)
-                grid_position = (input("Please select a grid position 1 - 9 or type in 'quit' to leave the game:\n "))
+                grid_pos = (input("Please select a grid position 1 - 9 or type in 'quit' to leave the game:\n "))
 
-                if grid_position.lower() == "quit":
+                if grid_pos.lower() == "quit":
                     self.game_running = False
                     break
 
-                grid_position = int(grid_position)
+                grid_pos = int(grid_pos)
 
-                if 1<= grid_position <=9 and self.game_board[grid_position-1] == "-":
-                    self.game_board[grid_position-1] = self.current_player
+                if 1<= grid_pos <=9 and self.game_board[grid_pos-1] == "-":
+                    self.game_board[grid_pos-1] = self.current_player
                     break
                 
-                elif 1<= grid_position <9 and self.game_board[grid_position-1] != "-":
+                elif 1<= grid_pos <9 and self.game_board[grid_pos-1] != "-":
                     print("-" * 45)
                     print(f"Looks like that spot is already taken, please try again.\n")
                     self.print_game_board()

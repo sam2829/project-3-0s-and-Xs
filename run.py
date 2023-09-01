@@ -39,7 +39,14 @@ class PlayGame:
                 print("-" * 45)
                 print(f"It's your turn {self.player_name}.\n")
                 print("-" * 45)
-                inp = int(input("Please select a grid position 1 - 9:\n "))
+                inp = (input("Please select a grid position 1 - 9 or type in 'quit' to leave the game:\n "))
+
+                if inp.lower() == "quit":
+                    self.game_running = False
+                    break
+
+                inp = int(inp)
+
                 if 1<= inp <=9 and self.game_board[inp-1] == "-":
                     self.game_board[inp-1] = self.current_player
                     break
@@ -48,7 +55,7 @@ class PlayGame:
                     print("-" * 45)
                     print(f"Looks like that spot is already taken, please try again.\n")
                     self.print_game_board()
-                
+                    
                 else:
                     raise ValueError(f"Please select a value between numbers 1 - 9")
             except ValueError as e:
@@ -153,6 +160,7 @@ class PlayGame:
                 self.switch_player()
 
 
+
     def restart_game(self):
         """
         This method asks the user if they would like to play the game again. Yes will restart the game, anything else will end the game.
@@ -192,6 +200,7 @@ class PlayGame:
             self.computers_turn()
             self.check_for_winner()
             self.check_for_tie()
+
         else:
             self.restart_game()
 

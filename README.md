@@ -110,7 +110,7 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
   I then had to repeat this process but this time adding the "node.js" buildpack. It is important to make sure these buildpacks are added in this order.
   - I then went back to the tabs row at the top of the page and clicked on the "Deploy" tab to take me to the deploy page.
   - On the deployment page, I scrolled down to deployment method and confirmed I wanted to deploy through GitHub.
-  - When I click on GitHub a search bar will appear underneath which will allow me to search for my GitHub repository. I made sure I spelt the repository I'm searching for exactly as i named it and then clicked the search button.
+  - When I click on GitHub a search bar will appear underneath which will allow me to search for my GitHub repository. I made sure I spelt the repository I'm searching for exactly as I named it and then clicked the search button.
   - The repository then appeared underneath my search, I checked this was the correct repository and then clicked the "connect" button. This has now linked up my Heroku app and my GitHub repository code.
   - I then scrolled and clicked on the button "Enable Automatic Deploys", this allows my Heroku app to automatically update every time I've pushed a new change to my code to GitHub.
   - I then scrolled down and clicked on the button "Deploy Branch" which is now building the app.

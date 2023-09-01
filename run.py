@@ -1,3 +1,4 @@
+# Ive imported random to generate a random number for computers turn.
 import random
 
 class PlayGame:

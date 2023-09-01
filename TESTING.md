@@ -1,6 +1,18 @@
+# 0's and X's the game Testing
+
+## Contents
+
+* [Automated Testing](#automated-testing)
+* [Manual Testing](#manual-testing)
+
+## Automated Testing
+
+- Passed the code through a PEP8 linter and confirmed there are no problems.
+
+## Manual Testing
+
 I have manually tested this project by doing the following:
 
-  - Passed the code through a PEP8 linter and confirmed there are no problems.
   - Given invalid inputs: strings when numbers are expected, out of bounds inputs, same input twice.
   - Tested in my local terminal and the Code Institute Heroku terminal.
 

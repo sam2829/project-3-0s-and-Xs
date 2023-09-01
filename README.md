@@ -82,6 +82,10 @@ The game can also end in a tie, in this scenario the game will be stopped, a mes
 
 ![Tie screenshot](assets/screenshots/tie-screenshot.png)
 
+Before each turn the user will be asked to select a number between 1 and 9 or type in 'quit' to leave the game. If the player types in 'quit' the game ends and the player is asked if they would like to play again.
+
+![Quit Screenshot](assets/screenshots/quit-screenshot.png)
+
 
 ## Technologies Used
 

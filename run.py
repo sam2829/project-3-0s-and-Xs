@@ -43,7 +43,8 @@ class PlayGame:
                 print("-" * 45)
                 print(f"It's your turn {self.player_name}.\n")
                 print("-" * 45)
-                grid_pos = (input("Please select a grid position 1 - 9 or type in 'quit' to leave the game:\n "))
+                grid_pos = (input("Please select a grid position 1 - 9 "
+                                   "or type in 'quit' to leave the game:\n "))
 
                 if grid_pos.lower() == "quit":
                     self.game_running = False
@@ -57,11 +58,13 @@ class PlayGame:
                 
                 elif 1<= grid_pos <9 and self.game_board[grid_pos-1] != "-":
                     print("-" * 45)
-                    print(f"Looks like that spot is already taken, please try again.\n")
+                    print(f"Looks like that spot is already taken, "
+                           "please try again.\n")
                     self.print_game_board()
                     
                 else:
-                    raise ValueError(f"Please select a value between numbers 1 - 9")
+                    raise ValueError(f"Please select a value between "
+                                      "numbers 1 - 9")
             except ValueError as e:
                 print("-" * 45)
                 print(f"Invalid number: {e}, please try again.\n")
@@ -73,15 +76,18 @@ class PlayGame:
         the rows on the game board.
         """
 
-        if self.game_board[0] == self.game_board[1] == self.game_board[2] and self.game_board[0] != "-":
+        if (self.game_board[0] == self.game_board[1] == self.game_board[2]
+            and self.game_board[0] != "-"):
             self.winner = self.game_board[0]
             return True
         
-        elif self.game_board[3] == self.game_board[4] == self.game_board[5] and self.game_board[3] != "-":
+        elif (self.game_board[3] == self.game_board[4] == self.game_board[5]
+              and self.game_board[3] != "-"):
             self.winner = self.game_board[3]
             return True
         
-        elif self.game_board[6] == self.game_board[7] == self.game_board[8] and self.game_board[6] != "-":
+        elif (self.game_board[6] == self.game_board[7] == self.game_board[8]
+              and self.game_board[6] != "-"):
             self.winner = self.game_board[6]
             return True
 
@@ -91,15 +97,18 @@ class PlayGame:
         This method checks to see if there is a winner across any of
         the columns on the game board.
         """
-        if self.game_board[0] == self.game_board[3] == self.game_board[6] and self.game_board[0] != "-":
+        if (self.game_board[0] == self.game_board[3] == self.game_board[6]
+            and self.game_board[0] != "-"):
             self.winner = self.game_board[0]
             return True
         
-        elif self.game_board[1] == self.game_board[4] == self.game_board[7] and self.game_board[1] != "-":
+        elif (self.game_board[1] == self.game_board[4] == self.game_board[7]
+              and self.game_board[1] != "-"):
             self.winner = self.game_board[1]
             return True
         
-        elif self.game_board[2] == self.game_board[5] == self.game_board[8] and self.game_board[2] != "-":
+        elif (self.game_board[2] == self.game_board[5] == self.game_board[8]
+              and self.game_board[2] != "-"):
             self.winner = self.game_board[2]
             return True
 
@@ -108,11 +117,13 @@ class PlayGame:
         This method checks to see if there is a winner across any of
         the diagonals on the game board.
         """
-        if self.game_board[0] == self.game_board[4] == self.game_board[8] and self.game_board[0] != "-":
+        if (self.game_board[0] == self.game_board[4] == self.game_board[8]
+            and self.game_board[0] != "-"):
             self.winner = self.game_board[0]
             return True
         
-        elif self.game_board[2] == self.game_board[4] == self.game_board[6] and self.game_board[2] != "-":
+        elif (self.game_board[2] == self.game_board[4] == self.game_board[6]
+              and self.game_board[2] != "-"):
             self.winner = self.game_board[2]
             return True
 
@@ -138,7 +149,8 @@ class PlayGame:
         This method checks to see if the game has ended in a tie
         """
 
-        if "-" not in self.game_board and not self.check_row() and not self.check_column() and not self.check_diagonal():
+        if ("-" not in self.game_board and not self.check_row()
+            and not self.check_column() and not self.check_diagonal()):
             print("-" * 45)
             self.print_game_board()
             print("It's a tie!")
@@ -176,7 +188,8 @@ class PlayGame:
         Yes will restart the game, anything else will end the game.
         """
         print("-" * 45)
-        play_again = (input(f"Would you like to play again? Please type 'yes' or 'no'.\n"))
+        play_again = (input(f"Would you like to play again? "
+                             "Please type 'yes' or 'no'.\n"))
         
         
         try:
@@ -233,7 +246,8 @@ def new_game():
     """
     print("-" * 45)
     print("Welcome to 0's and X's the game!!!")
-    print("Below is the game board showing you the number value of each grid\nposition of the game board. \n")
+    print("Below is the game board showing you the number value of each grid\n"
+          "position of the game board.\n")
     game_board_value =  ["1", "2", "3",
                          "4", "5", "6",
                          "7", "8", "9"]

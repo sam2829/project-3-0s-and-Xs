@@ -9,7 +9,7 @@ class PlayGame:
         """
         self.game_board = ["-", "-", "-",
                            "-", "-", "-",
-                           "-", "-", "-",]
+                           "-", "-", "-"]
         self.current_player = "x"
         self.player_name = player_name
         self.winner = None
@@ -223,7 +223,7 @@ def new_game():
     print("Below is the game board showing you the number value of each grid\nposition of the game board. \n")
     game_board_value =  ["1", "2", "3",
                          "4", "5", "6",
-                         "7", "8", "9",]
+                         "7", "8", "9"]
     print("---------------")
     print(" | " + game_board_value[0] + " | " + game_board_value[1] + " | " + game_board_value[2] + " | ")
     print("---------------")

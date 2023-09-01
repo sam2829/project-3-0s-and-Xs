@@ -49,7 +49,7 @@ The console will inform the user that it's their turn and ask them to select a g
 
 Once the player has selected a position on the grid an 'x' will appear in that position. The computer will automatically will then take its turn and position a '0' randomly on the grid.
 
-The player will then be informed that it's their turn again and asked to select another position on the grid by entering a value between 1 and 9.
+The player will then be informed that it's their turn again and asked to select another position on the grid by entering a value between 1 and 9 or type in 'quit' to leave the game.
 This again must a whole number between 1 and 9 as an integer but cannot be a position already taken up by an 'x' or a '0' on the grid.
 
 ![Go again screenshot](assets/screenshots/go-again-screenshot.png)
@@ -66,11 +66,11 @@ If the player tries to enter text instead of a number, they will be informed tha
 
 ![Text error screenshot](assets/screenshots/text-error-screenshot.png)
 
-If the player is the first connect three in a row, column or diagonally the game will stop. A congratulations message will appear and the user will be asked if they would like to play again. To play again the user must type in 'yes' and the game will return to the original start. If anything else is typed in the game will be ended.
+If the player is the first connect three in a row, column or diagonally the game will stop. A congratulations message will appear and the user will be asked if they would like to play again. To play again the user must type in 'yes' and the game will return to the original start. If the user types in 'no' the game will end, anything else an error code will appear asking the user to try again and type in 'yes' or 'no'.
 
 ![Winner screenshot](assets/screenshots/winner-screenshot.png)
 
-If the player decides not to play again, a thanks for playing message will be displayed and the program will stop running.
+If the player decides not to play again and types in 'no', a thanks for playing message will be displayed and the program will stop running.
 
 ![Stop game screenshot](assets/screenshots/stop-game-screenshot.png)
 

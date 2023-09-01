@@ -166,16 +166,22 @@ class PlayGame:
         This method asks the user if they would like to play the game again. Yes will restart the game, anything else will end the game.
         """
         print("-" * 45)
-        play_again = (input(f"Would you like to play again? If so please type 'yes'. \n"))
+        play_again = (input(f"Would you like to play again? Please type 'yes' or 'no'.\n"))
         
-        while True:
+        
+        try:
             if play_again.lower() == "yes":
                 new_game()
-            else:
+            elif play_again.lower() == "no":
                 print("-" * 45)
                 print("Thanks for playing.")
-            break
- 
+            else:
+                raise ValueError(f"Please type in 'yes' or 'no'\n")
+                
+        except ValueError as e:
+                print("-" * 45)
+                print(f"Invalid input: {e}, please try again.")
+                self.restart_game()
                 
 
 

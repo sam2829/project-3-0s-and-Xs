@@ -176,11 +176,11 @@ class PlayGame:
                 print("-" * 45)
                 print("Thanks for playing.")
             else:
-                raise ValueError(f"Please type in 'yes' or 'no'\n")
+                raise ValueError(f"Please type in 'yes' or 'no',\n")
                 
         except ValueError as e:
                 print("-" * 45)
-                print(f"Invalid input: {e}, please try again.")
+                print(f"Invalid input: {e} please try again.")
                 self.restart_game()
                 
 

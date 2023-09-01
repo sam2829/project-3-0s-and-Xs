@@ -43,7 +43,7 @@ The user will also be asked to enter their name.
 
 Once the user has entered their name, another welcome message will appear and print out the game board.
 
-The console will inform the user that it's their turn and ask them to select a grid position between 1 and 9. This must be a whole number between 1 and 9 entered as an integer.
+The console will inform the user that it's their turn and ask them to select a grid position between 1 and 9 or type in 'quit' to leave the game. This must be a whole number between 1 and 9 entered as an integer.
 
 ![Start game screenshot](assets/screenshots/start-game-screenshot.png)
 

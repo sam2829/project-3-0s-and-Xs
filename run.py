@@ -33,8 +33,8 @@ class PlayGame:
 
     def player_input(self):
         """
-        This method allows the user to select a grid position 1-9, the value entered must be an
-        integer and must be a value 1 - 9.
+        This method allows the user to select a grid position 1-9,
+        the value entered must be an integer and must be a value 1 - 9.
         """
 
         while True:
@@ -69,7 +69,8 @@ class PlayGame:
 
     def check_row(self):
         """
-        This method checks to see if there is a winner across any of the rows on the game board.
+        This method checks to see if there is a winner across any of
+        the rows on the game board.
         """
 
         if self.game_board[0] == self.game_board[1] == self.game_board[2] and self.game_board[0] != "-":
@@ -87,7 +88,8 @@ class PlayGame:
 
     def check_column(self):
         """
-        This method checks to see if there is a winner across any of the columns on the game board.
+        This method checks to see if there is a winner across any of
+        the columns on the game board.
         """
         if self.game_board[0] == self.game_board[3] == self.game_board[6] and self.game_board[0] != "-":
             self.winner = self.game_board[0]
@@ -103,7 +105,8 @@ class PlayGame:
 
     def check_diagonal(self):
         """
-        This method checks to see if there is a winner across any of the diagonals on the game board.
+        This method checks to see if there is a winner across any of
+        the diagonals on the game board.
         """
         if self.game_board[0] == self.game_board[4] == self.game_board[8] and self.game_board[0] != "-":
             self.winner = self.game_board[0]
@@ -115,7 +118,8 @@ class PlayGame:
 
     def check_for_winner(self):
         """
-        This method will check to see if there has been a winner and if so return a false to game_running and stop the game.
+        This method will check to see if there has been a winner and if
+        so return a false to game_running and stop the game.
         """
 
         if self.check_row() or self.check_column() or self.check_diagonal():
@@ -154,7 +158,8 @@ class PlayGame:
 
     def computers_turn(self):
         """
-        This method allows the computer to decide where on the grid it would like to place its go
+        This method allows the computer to decide where on the grid it
+        would like to place its go
         """
 
         while self.current_player == "0":
@@ -167,7 +172,8 @@ class PlayGame:
 
     def restart_game(self):
         """
-        This method asks the user if they would like to play the game again. Yes will restart the game, anything else will end the game.
+        This method asks the user if they would like to play the game again.
+        Yes will restart the game, anything else will end the game.
         """
         print("-" * 45)
         play_again = (input(f"Would you like to play again? Please type 'yes' or 'no'.\n"))
@@ -192,7 +198,8 @@ class PlayGame:
     
     def run_game(self):
         """
-        This method is allowing us to play the game and creates a while loop, which keeps looping until we have a winnner.
+        This method is allowing us to play the game and creates a while loop,
+        which keeps looping until we have a winnner.
         """
 
         while self.game_running:
@@ -202,7 +209,9 @@ class PlayGame:
             self.check_for_tie()
             self.switch_player()
             
-            #This if not statement was added so that if the user wins or a tie, the game board and results message isnt printed twice.
+            # This if not statement was added so that if the 
+            # user wins or it is a tie,the game board and results 
+            # message isnt printed twice.
             if not self.game_running:
                 self.restart_game()
                 break
@@ -218,8 +227,9 @@ class PlayGame:
     
 def new_game():
     """
-    This function calls the PlayGame class to start the game. It asks for the players name and also 
-    prints out the game board showing the number values of each grid position on the grid.
+    This function calls the PlayGame class to start the game. It asks for
+    the players name and also prints out the game board showing the number
+    values of each grid position on the grid.
     """
     print("-" * 45)
     print("Welcome to 0's and X's the game!!!")

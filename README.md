@@ -36,7 +36,7 @@ To help me design and create the code for this game, I built a flow chart to hel
 
 ## Features
 
-When you first load the game, a welcome message is displayed along with information stating the value of the square in the top left of the grid.
+When you first load the game, a welcome message is displayed along with a print out of the game board showing the number values of each grid position on the board.
 The user will also be asked to enter their name.
 
 ![Welcome screenshot](assets/screenshots/welcome-screenshot.png)

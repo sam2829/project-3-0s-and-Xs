@@ -65,7 +65,7 @@ class PlayGame:
                                      "numbers 1 - 9")
             except ValueError as e:
                 print("-" * 45)
-                print(f"Invalid number: {e}, please try again.\n")
+                print(f"Invalid number: {e},\n please try again.\n")
                 self.print_game_board()
 
     def check_row(self):

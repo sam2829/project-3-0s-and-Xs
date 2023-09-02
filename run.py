@@ -240,7 +240,18 @@ def new_game():
           " | " + game_board_value[8] + " | ")
     print("---------------")
     print("-" * 45)
-    player_name = input("Please enter your name: \n")
+    while True:
+        player_name = (input("Please enter your name: \n")).strip()
+        try:
+            if not player_name:
+                raise ValueError (f"Please make sure you type in your name.") 
+            elif player_name.isdigit():
+                raise ValueError (f"You have entered an integer.")
+            else:
+                break
+        except ValueError as e:
+            print("-" * 45)
+            print(f"Invalid input: {e} Please try again.")
     print("-" * 45)
     print(f"Welcome {player_name} lets get start the game!")
     print("-" * 45)

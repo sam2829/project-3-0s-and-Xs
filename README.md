@@ -138,6 +138,10 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
 
   - When I wrote the code, if the game finished with the user winning or a tie, the code would print out the final game board and results message twice. This seemed to be because the code was going through the run game method, while loop too quickly. To stop this, I put an if not statement in the while loop to break the loop if a winner or a tie had already been found after the players turn.
 
+  - When I wrote the code, if the user didn't type there name in and just pressed entered the game was allowed to continue. To stop this I made sure that the input must have a value and could not be an integer, otherwise this would raise an error. To do this I used Try and except statement.
+
+  - When i wrote the code, when the user would enter a grid position that was either a string or a decimal number, it wasnt displaying the error message I wanted. To fix this I added another try and except statement and now code displays the error messages I would like.
+
 
 
 

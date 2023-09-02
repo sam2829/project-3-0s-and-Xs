@@ -238,7 +238,7 @@ def new_game():
     print("-" * 45)
     print("Welcome to 0's and X's the game!!!")
     print("Below is the game board showing you the number value of each grid\n"
-          "position of the game board.\n")
+          "position on the game board.\n")
     game_board_value = ["1", "2", "3",
                         "4", "5", "6",
                         "7", "8", "9"]

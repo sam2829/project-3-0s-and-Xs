@@ -59,12 +59,12 @@ class PlayGame:
 
                     grid_pos = int(grid_pos)
 
-                    if 1 <= grid_pos <= 9 and
-                    self.game_board[grid_pos-1] == "-":
+                    if (1 <= grid_pos <= 9 and
+                       self.game_board[grid_pos-1] == "-"):
                         self.game_board[grid_pos-1] = self.current_player
                         break
-                    elif 1 <= grid_pos <= 9 and
-                    self.game_board[grid_pos-1] != "-":
+                    elif (1 <= grid_pos <= 9 and
+                          self.game_board[grid_pos-1] != "-"):
                         print("-" * 45)
                         print(f"Looks like that spot is already taken, "
                               "please try again.\n")

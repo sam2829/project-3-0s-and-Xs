@@ -16,6 +16,7 @@ Here is a live version of my project: [0's and X's the game](https://the-0-and-x
 * [Technologies Used](#technologies-used)
 * [Deployment](#deployment)
 * [Testing](#testing)
+* [Data Model](#data-model)
 * [Bugs](#bugs)
 * [Credits](#credits)
 
@@ -27,7 +28,7 @@ The user will first enter their name before starting the game. The user will the
 
 Once the user selects a grid position the computer will then select a random grid position, this will continue until there has been a declared winner or a tie.
 
-User must select a number between 1 and 9 and once that has not been selected previously by the user or computer.
+User must select a number between 1 and 9 and one that has not been selected previously by the user or computer.
 
 ## Design
 
@@ -55,14 +56,14 @@ The console will inform the user that it's their turn and ask them to select a g
 
 ![Start game screenshot](assets/screenshots/start-game-screenshot.png)
 
-Once the player has selected a position on the grid an 'x' will appear in that position. The computer will automatically will then take its turn and position a '0' randomly on the grid.
+Once the player has selected a position on the grid an 'x' will appear in that position. The computer will automatically then take its turn and position a '0' randomly on the grid.
 
 The player will then be informed that it's their turn again and asked to select another position on the grid by entering a value between 1 and 9 or type in 'quit' to leave the game.
-This again must a whole number between 1 and 9 as an integer but cannot be a position already taken up by an 'x' or a '0' on the grid.
+This again must be a whole number between 1 and 9 as an integer but cannot be a position already taken up by an 'x' or a '0' on the grid.
 
 ![Go again screenshot](assets/screenshots/go-again-screenshot.png)
 
-If the player selects a grid position that is already been taken up by an 'x' or a '0' they will be informed that that position has already been taken and to try again.
+If the player selects a grid position that is already been taken up by an 'x' or a '0' they will be informed that, that position has already been taken and to try again.
 
 ![Position taken screenshot](assets/screenshots/spot-taken-screenshot.png)
 
@@ -78,7 +79,7 @@ If the player tries to enter a decimal number, they will be informed the number 
 
 ![Decimal Screenshot](assets/screenshots/decimal-screenshot.png)
 
-If the player is the first connect three in a row, column or diagonally the game will stop. A congratulations message will appear and the user will be asked if they would like to play again. To play again the user must type in 'yes' and the game will return to the original start. If the user types in 'no' the game will end, anything else an error code will appear asking the user to try again and type in 'yes' or 'no'.
+If the player is the first to connect three in a row, column or diagonally the game will stop. A congratulations message will appear and the user will be asked if they would like to play again. To play again the user must type in 'yes' and the game will return to the original start. If the user types in 'no' the game will end, anything else an error code will appear asking the user to try again and type in 'yes' or 'no'.
 
 ![Winner screenshot](assets/screenshots/winner-screenshot.png)
 
@@ -128,9 +129,9 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
   - On the deployment page, I scrolled down to deployment method and confirmed I wanted to deploy through GitHub.
   - When I click on GitHub a search bar will appear underneath which will allow me to search for my GitHub repository. I made sure I spelt the repository I'm searching for exactly as I named it and then clicked the search button.
   - The repository then appeared underneath my search, I checked this was the correct repository and then clicked the "connect" button. This has now linked up my Heroku app and my GitHub repository code.
-  - I then scrolled and clicked on the button "Enable Automatic Deploys", this allows my Heroku app to automatically update every time I've pushed a new change to my code to GitHub.
+  - I then scrolled down and clicked on the button "Enable Automatic Deploys", this allows my Heroku app to automatically update every time I've pushed a new change to my code to GitHub.
   - I then scrolled down and clicked on the button "Deploy Branch" which is now building the app.
-  - Once the app is successfully deployed, a message appeared "saying your app was successfully deployed." Then click on the "view" button which will take me to the deployed link.
+  - Once the app is successfully deployed, a message appeared saying "your app was successfully deployed." Then click on the "view" button which will take me to the deployed link.
 
   ## Data Model
 
@@ -138,7 +139,7 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
 
   The PlayGame class stores the board size, the grid positions of both the user and computer, players name and who's turn it is.
 
-  The PlayGame class also has methods that help play the game, such as a print method to print out the current game board, players choice of grid position, check to see if there has been a winner or a tie, switch turns between player and computer, method for computer to select a random grid position computers turn and one to ask the user if they would like to restart the game.
+  The PlayGame class also has methods that help play the game, such as a print method to print out the current game board, players choice of grid position, check to see if there has been a winner or a tie, switch turns between player and computer, method for computer to select a random grid position on computers turn and one to ask the user if they would like to restart the game.
 
   ## Testing
 
@@ -150,7 +151,7 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
 
   - When I wrote the code, if the game finished with the user winning or a tie, the code would print out the final game board and results message twice. This seemed to be because the code was going through the run game method, while loop too quickly. To stop this, I put an if not statement in the while loop to break the loop if a winner or a tie had already been found after the players turn.
 
-  - When I wrote the code, if the user didn't type their name in and just pressed entered the game was allowed to continue. To stop this, I made sure that the input must have a value and could not be an integer, otherwise this would raise an error. To do this I used Try and except statement.
+  - When I wrote the code, if the user didn't type their name in and just pressed enter the game was allowed to continue. To stop this, I made sure that the input must have a value and could not be an integer, otherwise this would raise an error. To do this I used Try and except statement.
 
   - When I wrote the code, when the user would enter a grid position that was either a string or a decimal number, it wasn't displaying the error message I wanted. To fix this I added another try and except statement and now code displays the error messages I would like.
 

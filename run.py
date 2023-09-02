@@ -74,7 +74,7 @@ class PlayGame:
                 except ValueError:
                     print("-" * 45)
                     print(f"Invalid number: Please select a value between "
-                          "numbers 1 - 9")
+                          "numbers 1 - 9, please try again.")
                     self.print_game_board()
             except ValueError as e:
                 print("-" * 45)

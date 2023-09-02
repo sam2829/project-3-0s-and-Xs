@@ -41,6 +41,14 @@ The user will also be asked to enter their name.
 
 ![Welcome screenshot](assets/screenshots/welcome-screenshot.png)
 
+If the user tries to continue without entering their name by just clicking enter, an error message will appear asking the user to enter their name.
+
+![No Name Screenshot](assets/screenshots/no-name-screenshot.png)
+
+If the user tries entering their name as a number, an error message will appear asking them to enter the name.
+
+![Number Name Screenshot](assets/screenshots/number-name-screenshot.png)
+
 Once the user has entered their name, another welcome message will appear and print out the game board.
 
 The console will inform the user that it's their turn and ask them to select a grid position between 1 and 9 or type in 'quit' to leave the game. This must be a whole number between 1 and 9 entered as an integer.
@@ -65,6 +73,10 @@ If the player tries to enter a number that's not between 1 and 9, they will be i
 If the player tries to enter text instead of a number, they will be informed that the number is invalid, with an error message and to try again.
 
 ![Text error screenshot](assets/screenshots/text-error-screenshot.png)
+
+If the player tries to enter a decimal number, they will be informed the number is invalid, with an error message and to try again.
+
+![Decimal Screenshot](assets/screenshots/decimal-screenshot.png)
 
 If the player is the first connect three in a row, column or diagonally the game will stop. A congratulations message will appear and the user will be asked if they would like to play again. To play again the user must type in 'yes' and the game will return to the original start. If the user types in 'no' the game will end, anything else an error code will appear asking the user to try again and type in 'yes' or 'no'.
 

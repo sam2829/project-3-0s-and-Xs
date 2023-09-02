@@ -3,8 +3,8 @@
 
 Users can try to beat the computer by connecting three X's in a line whether it be in the same row, column or diagonal before computer does with 0's. Take it in turns to select your positions on the grid.
 
-Here is a live version of my project:
-https://the-0-and-x-game-643188cf49a3.herokuapp.com/
+Here is a live version of my project: [0's and X's the game](https://the-0-and-x-game-643188cf49a3.herokuapp.com/)
+
 
 ![Am I Responsive](assets/screenshots/responsive-screenshot.png)
 
@@ -147,7 +147,7 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
 
 ## Credits
 
-- Watched tutorial on how to build a Tic Tac Toe game on YouTube which I found very helpful. https://www.youtube.com/watch?v=dK6gJw4-NCo&t=192s
+- Watched tutorial on how to build a Tic Tac Toe game on YouTube which helped me think about how I should structure my code and things I should consider. https://www.youtube.com/watch?v=dK6gJw4-NCo&t=192s
 
 
 

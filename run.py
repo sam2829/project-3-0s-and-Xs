@@ -67,17 +67,15 @@ class PlayGame:
                     self.game_board[grid_pos-1] != "-":
                         print("-" * 45)
                         print(f"Looks like that spot is already taken, "
-                            "please try again.\n")
+                              "please try again.\n")
                         self.print_game_board()
                     else:
                         raise ValueError
-                
                 except ValueError:
                     print("-" * 45)
                     print(f"Invalid number: Please select a value between "
                           "numbers 1 - 9")
                     self.print_game_board()
-            
             except ValueError as e:
                 print("-" * 45)
                 print(f"Invalid number: {e},\nplease try again.\n")
@@ -261,9 +259,9 @@ def new_game():
         player_name = (input("Please enter your name: \n")).strip()
         try:
             if not player_name:
-                raise ValueError (f"Please make sure you type in your name.")
+                raise ValueError(f"Please make sure you type in your name.")
             elif player_name.isdigit():
-                raise ValueError (f"You have entered an integer.")
+                raise ValueError(f"You have entered an integer.")
             else:
                 break
         except ValueError as e:

@@ -63,7 +63,7 @@ This again must be a whole number between 1 and 9 as an integer but cannot be a 
 
 ![Go again screenshot](assets/screenshots/go-again-screenshot.png)
 
-If the player selects a grid position that is already been taken up by an 'x' or a '0' they will be informed that, that position has already been taken and to try again.
+If the player selects a grid position that has already been taken up by an 'x' or a '0' they will be informed that, this position has already been taken and to try again.
 
 ![Position taken screenshot](assets/screenshots/spot-taken-screenshot.png)
 
@@ -153,7 +153,7 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
 
   - When I wrote the code, if the user didn't type their name in and just pressed enter the game was allowed to continue. To stop this, I made sure that the input must have a value and could not be an integer, otherwise this would raise an error. To do this I used Try and except statement.
 
-  - When I wrote the code, when the user would enter a grid position that was either a string or a decimal number, it wasn't displaying the error message I wanted. To fix this I added another try and except statement and now code displays the error messages I would like.
+  - When I wrote the code, if the user would enter a grid position that was either a string or a decimal number, it wasn't displaying the error message I wanted. To fix this I added another try and except statement and now code displays the error messages I would like.
 
 
 

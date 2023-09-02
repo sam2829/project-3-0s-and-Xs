@@ -120,6 +120,14 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
   - I then scrolled down and clicked on the button "Deploy Branch" which is now building the app.
   - Once the app is successfully deployed, a message appeared "saying your app was successfully deployed." Then click on the "view" button which will take me to the deployed link.
 
+  ## Data Model
+
+  I decided to use a PlayGame class as my model. The game creates an instance of the PlayGame class to the game board to play the game.
+
+  The PlayGame class stores the board size, the grid positions of both the user and computer, players name and whos turn it is.
+
+  The PlayGame class also has methods that help play the game, such as a print method to print out the current game board, players choice of grid postion, check to see if there has been a winner or a tie, switch turns between player and computer, method for computer to select a random grid postion computers turn and one to ask the user if they would like to restart the the game.
+
   ## Testing
 
   Please refer to [TESTING.md](TESTING.md) file for all testing carried out.

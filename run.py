@@ -46,6 +46,9 @@ class PlayGame:
                 grid_pos = (input("Please select a grid position 1 - 9 "
                                   "or type in 'quit' to leave the game:\n "))
 
+                if not grid_pos:
+                    raise ValueError(f"Please enter a value")
+
                 if grid_pos.lower() == "quit":
                     self.game_running = False
                     break
@@ -63,6 +66,7 @@ class PlayGame:
                 else:
                     raise ValueError(f"Please select a value between "
                                      "numbers 1 - 9")
+            
             except ValueError as e:
                 print("-" * 45)
                 print(f"Invalid number: {e},\nplease try again.\n")
@@ -244,7 +248,7 @@ def new_game():
         player_name = (input("Please enter your name: \n")).strip()
         try:
             if not player_name:
-                raise ValueError (f"Please make sure you type in your name.") 
+                raise ValueError (f"Please make sure you type in your name.")
             elif player_name.isdigit():
                 raise ValueError (f"You have entered an integer.")
             else:

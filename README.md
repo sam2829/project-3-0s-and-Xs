@@ -136,9 +136,9 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
 
   I decided to use a PlayGame class as my model. The game creates an instance of the PlayGame class to the game board to play the game.
 
-  The PlayGame class stores the board size, the grid positions of both the user and computer, players name and whos turn it is.
+  The PlayGame class stores the board size, the grid positions of both the user and computer, players name and who's turn it is.
 
-  The PlayGame class also has methods that help play the game, such as a print method to print out the current game board, players choice of grid postion, check to see if there has been a winner or a tie, switch turns between player and computer, method for computer to select a random grid postion computers turn and one to ask the user if they would like to restart the the game.
+  The PlayGame class also has methods that help play the game, such as a print method to print out the current game board, players choice of grid position, check to see if there has been a winner or a tie, switch turns between player and computer, method for computer to select a random grid position computers turn and one to ask the user if they would like to restart the game.
 
   ## Testing
 
@@ -150,9 +150,9 @@ This project was deployed using the Code Institute's mock terminal for Heroku.
 
   - When I wrote the code, if the game finished with the user winning or a tie, the code would print out the final game board and results message twice. This seemed to be because the code was going through the run game method, while loop too quickly. To stop this, I put an if not statement in the while loop to break the loop if a winner or a tie had already been found after the players turn.
 
-  - When I wrote the code, if the user didn't type there name in and just pressed entered the game was allowed to continue. To stop this I made sure that the input must have a value and could not be an integer, otherwise this would raise an error. To do this I used Try and except statement.
+  - When I wrote the code, if the user didn't type their name in and just pressed entered the game was allowed to continue. To stop this, I made sure that the input must have a value and could not be an integer, otherwise this would raise an error. To do this I used Try and except statement.
 
-  - When i wrote the code, when the user would enter a grid position that was either a string or a decimal number, it wasnt displaying the error message I wanted. To fix this I added another try and except statement and now code displays the error messages I would like.
+  - When I wrote the code, when the user would enter a grid position that was either a string or a decimal number, it wasn't displaying the error message I wanted. To fix this I added another try and except statement and now code displays the error messages I would like.
 
 
 

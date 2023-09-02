@@ -46,26 +46,35 @@ class PlayGame:
                 grid_pos = (input("Please select a grid position 1 - 9 "
                                   "or type in 'quit' to leave the game:\n "))
 
-                if not grid_pos:
+                if not grid_pos.strip():
                     raise ValueError(f"Please enter a value")
 
                 if grid_pos.lower() == "quit":
                     self.game_running = False
                     break
+                # Added second try if statement to catch errors after grid_pos
+                # was turned into integer and that correct error messages
+                # are displayed.
+                try:
 
-                grid_pos = int(grid_pos)
+                    grid_pos = int(grid_pos)
 
-                if 1 <= grid_pos <= 9 and self.game_board[grid_pos-1] == "-":
-                    self.game_board[grid_pos-1] = self.current_player
-                    break
-                elif 1 <= grid_pos <= 9 and self.game_board[grid_pos-1] != "-":
+                    if 1 <= grid_pos <= 9 and self.game_board[grid_pos-1] == "-":
+                        self.game_board[grid_pos-1] = self.current_player
+                        break
+                    elif 1 <= grid_pos <= 9 and self.game_board[grid_pos-1] != "-":
+                        print("-" * 45)
+                        print(f"Looks like that spot is already taken, "
+                            "please try again.\n")
+                        self.print_game_board()
+                    else:
+                        raise ValueError
+                
+                except ValueError:
                     print("-" * 45)
-                    print(f"Looks like that spot is already taken, "
-                          "please try again.\n")
+                    print(f"Invalid number: Please select a value between "
+                          "numbers 1 - 9")
                     self.print_game_board()
-                else:
-                    raise ValueError(f"Please select a value between "
-                                     "numbers 1 - 9")
             
             except ValueError as e:
                 print("-" * 45)
@@ -244,6 +253,8 @@ def new_game():
           " | " + game_board_value[8] + " | ")
     print("---------------")
     print("-" * 45)
+    # While loop added here with error messages to make sure user
+    # enters there name before playing and it is not an integer.
     while True:
         player_name = (input("Please enter your name: \n")).strip()
         try:
